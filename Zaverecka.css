@@ -1,0 +1,114 @@
+::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    width: 69%;
+    min-height: 100vh;
+    background-image: url("webovky-klasa.png");
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+
+.calc {
+    background: #1a1a1a;
+    border-radius: 24px;
+    padding: 28px;
+    width: 100%;
+    max-width: 480px;
+    outline: 2px solid #333;
+
+}
+
+.display {
+    background: #0d0d0d;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    min-height: 110px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    overflow: hidden;
+}
+
+.expr {
+    font-family: 'Share Tech Mono', monospace;
+    font-size: 15px;
+    color: #666;
+    min-height: 20px;
+    word-break: break-all;
+    text-align: right;
+}
+
+.result {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 64px;
+    color: #f0f0f0;
+    line-height: 1;
+    letter-spacing: 2px;
+    word-break: break-all;
+    transition: font-size 0.1s;
+}
+
+.result.small  { font-size: 40px; }
+.result.xsmall { font-size: 28px; }
+
+.btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: 1px;
+    border: none;
+    border-radius: 12px;
+    height: 72px;
+    cursor: pointer;
+    transition: transform 0.08s, filter 0.08s;
+    user-select: none;
+}
+
+.btn:active {
+    transform: scale(0.92);
+    filter: brightness(1.3);
+}
+
+.btn-num   { background: #2e2e2e; color: #f0f0f0; }
+.btn-op    { background: #ff8c00; color: #fff; font-size: 28px; }
+.btn-fn    { background: #3a3a3a; color: #ff8c00; font-size: 20px; }
+.btn-clear { background: #c0392b; color: #fff; }
+.btn-del   { background: #3a3a3a; color: #ff8c00; }
+.btn-zero  { grid-column: span 2; }
+
+.nav  {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    position: relative;
+    top: -375px;
+    left: 600px;
+    width: 50%;
+    height: 10%;
+    background-color: #111;
+    padding: 10px;
+    color: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+    text-align: center;
+}
+
+.nav a{
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 21px;
+    color: white;
+    margin-right: 15px;
+    text-decoration: none;
+    text-align: center;
+}
